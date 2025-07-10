@@ -45,3 +45,4 @@ next-env.d.ts
 eval \"$(ssh-agent -s)\".pub
 eval \"$(ssh-agent -s)\"
 README.md.save
+.idea/
