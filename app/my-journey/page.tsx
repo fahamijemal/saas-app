@@ -1,7 +1,9 @@
 export default function Profile () {
     return (
         <div>
-            <h2>new companions</h2>
+            <h2>Profile</h2>
         </div>
     );
 }
+
+

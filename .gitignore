@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# clerk configuration (can include secrets)
+/.clerk/
+eval \"$(ssh-agent -s)\".pub
+eval \"$(ssh-agent -s)\"
+README.md.save
