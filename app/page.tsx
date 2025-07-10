@@ -1,14 +1,15 @@
 'use client';
-import ComponentCard from "@/components/ComponentCard";
-import CTA from "@/components/CTA";
+import CompanionCard from "@/components/CompanionCard";
 import CompanionsList from "@/components/CompanionsList";
+import {recentSessions} from "@/constants";
+import Cta from "@/components/CTA";
 
 export default function HomePage() {
     return (
         <main>
             <h1>Popular companions</h1>
             <section className="home-section">
-                <ComponentCard
+                <CompanionCard
                     id="123"
                     name="Neura the Explorer"
                     topic="Neural Network of the brain"
@@ -16,7 +17,7 @@ export default function HomePage() {
                     duration={45}
                     color="#ffda6e"
                 />
-                <ComponentCard
+                <CompanionCard
                     id="124"
                     name="Neura the Explorer"
                     topic="Neural Network of the brain"
@@ -24,7 +25,7 @@ export default function HomePage() {
                     duration={45}
                     color="#e5dfff"
                 />
-                <ComponentCard
+                <CompanionCard
                     id="125"
                     name="Neura the Explorer"
                     topic="Language"
@@ -35,8 +36,12 @@ export default function HomePage() {
             </section>
 
             <section className="home-section">
-                <CTA />
-                <CompanionsList />
+                <Cta />
+                <CompanionsList
+                    title="Recently completed sessions"
+                    companions={recentSessions}
+                    className='w-2/3 max-lg:w-full'
+                />
             </section>
         </main>
     );
