@@ -1,27 +1,30 @@
-"use client";
-
-import { cn } from "@/lib/utils";
+'use client';
 import Link from "next/link";
 import {usePathname} from "next/navigation";
+import {cn} from "@/lib/utils";
 
 const navItems = [
-    {label: 'Home', href: '/'},
-    {label: 'Learning Companions', href: '/companions'},
-    {label: 'My-journey', href: '/my-journey'},
-
+    { label:'Home', href: '/' },
+    { label: 'Learning Companions', href: '/companions' },
+    { label: 'My Journey', href: 'my-journey' },
 ]
+
 const NavItems = () => {
-    const pathname =usePathname();
-    return(
-        <nav className='flex items-center gap-4'>
-            {navItems.map(({label, href})=>(
+    const pathname = usePathname();
+
+    return (
+        <nav className="flex items-center gap-4">
+            {navItems.map(({ label, href }) => (
                 <Link
                     href={href}
                     key={label}
-                    className={cn(pathname===href && 'text-primary font-semibold')}
-                >{label}</Link>
+                    className={cn(pathname === href && 'text-primary font-semibold')}
+                >
+                    {label}
+                </Link>
             ))}
         </nav>
     )
 }
-export default NavItems;
+
+export default NavItems
