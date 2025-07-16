@@ -1,9 +1,7 @@
-import { SignIn } from "@clerk/nextjs";
+import { SignIn } from '@clerk/nextjs'
 
-export default function page() {
-    return (
-        <main className="flex items-center justify-center">
-            <SignIn routing="hash"/>
-        </main>
-    )
+export default function Page() {
+    return <main className="flex items-center justify-center">
+        <SignIn />
+    </main>
 }
